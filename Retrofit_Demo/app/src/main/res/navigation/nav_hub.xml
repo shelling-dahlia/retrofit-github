@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_hub"
+    app:startDestination="@id/fragmentUser">
+
+    <fragment
+        android:id="@+id/fragmentFollower"
+        android:name="com.example.retrofit_demo.screen.FragmentFollower"
+        android:label="FragmentFollower">
+        <action
+            android:id="@+id/action_FragmentFollower_to_FragmentUser"
+            app:destination="@id/fragmentUser" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFollowing"
+        android:name="com.example.retrofit_demo.screen.FragmentFollowing"
+        android:label="FragmentFollowing">
+        <action
+            android:id="@+id/action_FragmentFollowing_to_FragmentUser"
+            app:destination="@id/fragmentUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUser"
+        android:name="com.example.retrofit_demo.screen.FragmentUser"
+        android:label="FragmentUser">
+        <action
+            android:id="@+id/action_FragmentUser_to_FragmentFollowing"
+            app:destination="@id/fragmentFollowing" />
+        <action
+            android:id="@+id/action_FragmentUser_to_FragmentFollower"
+            app:destination="@id/fragmentFollower" />
+    </fragment>
+</navigation>
